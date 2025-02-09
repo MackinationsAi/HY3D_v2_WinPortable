@@ -1,14 +1,15 @@
 ## [HY3D_v2] - Hungyaun3D v2 Windows Portable
 
+![Screenshot 2025-02-08 at 23-56-24 Gradio](https://github.com/user-attachments/assets/e9d214d6-ea31-4d82-a287-8a0dc97240b8)
+
 A self-contained, portable package for running **Hunyuan3D v2** on Windows w/ a custom gradio build.
 
 ### Features
 - Convert **2D images** into **3D models** (Base Mesh & Textured Mesh)
 - Supports **Text-to-3D** generation (enabled by default)
 - Optimized for **low-VRAM** GPUs w/ fallback modes
-- **One click finalize build** – portable and easy to use
-
----
+- **One click finalize build** – portable & easy to use
+- Viewer for previous generations
 
 ## 1. System Requirements
 ### Minimum Requirements
@@ -21,8 +22,6 @@ A self-contained, portable package for running **Hunyuan3D v2** on Windows w/ a 
 - **8GB+ VRAM** for full **shape + texture generation**
 - **24GB+ RAM** for smooth processing
 - **Latest NVIDIA drivers (March 2024 or newer)**
-
----
 
 ## 2. Installation & Setup
 
@@ -43,12 +42,11 @@ To enable **textured model generation**, install:
 ### Step 4: Running the App
 #### For High-VRAM GPUs (24GB)
 - **Run** `boot_HY3D_v2.bat`
-- **Access the WebUI**: Open [http://127.0.0.1:7860](http://127.0.0.1:7860) or [http://localhost:7860](http://localhost:7860)) in your browser.
+- **Access the WebUI**: Open [http://127.0.0.1:7860](http://127.0.0.1:7860) or [http://localhost:7860](http://localhost:7860) in your browser.
 
 #### For Low-VRAM GPUs (4GB-6GB)
 - **Run** `boot_low_vram_HY3D_v2.bat`
-- **Access the WebUI**: Open [http://127.0.0.1:7860](http://127.0.0.1:7860) or [http://localhost:7860](http://localhost:7860)
----
+- **Access the WebUI**: Open [http://127.0.0.1:7860](http://127.0.0.1:7860) or [http://localhost:7860](http://localhost:7860) in your browser.
 
 ## 3. Usage Instructions
 ### Generating 3D Models
@@ -63,8 +61,6 @@ To enable **textured model generation**, install:
   HY3D_v2/outputs/'%Y-%m-%d'/'%H-%M-%S'_steps-{num_steps}_cfg-{cfg_scale}_res-{octree_resolution}_seed-{seed}/*here
   ```
 
----
-
 ## 4. Understanding the Files
 ### Main Scripts
 | File | Description |
@@ -76,8 +72,6 @@ To enable **textured model generation**, install:
 | `oc_install.bat` | One-time setup for **texture generation** |
 | `run_build.bat` | Runs both  `dnld_models.bat` & `oc_install.bat` to install in one |
 
----
-
 ## 5. Troubleshooting
 ### Common Errors & Fixes
 | Error | Solution |
@@ -87,11 +81,9 @@ To enable **textured model generation**, install:
 | `Texture generation not working` | Ensure CUDA & VS Build Tools are installed, then re-run `oc_install.bat`. |
 | `Models not found` | Run `dnld_models.bat` again. |
 
----
-
 ## 6. Additional Features & Customization
-### Changing WebUI Theme
-1. Open the app and go to **UI Settings**.
+### Changing WebUI Theme [warning - other themes might look bad layout wise]
+1. Open the app & go to **UI Settings**.
 2. Select a new theme.
 3. Restart the app.
 
@@ -101,8 +93,6 @@ If you need a proxy, **add this** to your `.bat` scripts:
 set HTTP_PROXY=http://your-proxy.com:[port]
 set HTTPS_PROXY=http://your-proxy.com:[port]
 ```
-
----
 
 ## 7. Credits
 * Modified & Re-packaged by **MackinationsAi** ([GitHub](https://github.com/MackinationsAi))
