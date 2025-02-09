@@ -1,4 +1,4 @@
-## [HY3D_v2] - Hungyaun3D v2 Windows Portable
+## [HY3D_v2] - Hunyuan3D v2 Windows Portable
 
 ![Screenshot 2025-02-08 at 23-56-24 Gradio](https://github.com/user-attachments/assets/e9d214d6-ea31-4d82-a287-8a0dc97240b8)
 
@@ -26,7 +26,7 @@ A self-contained, portable package for running **Hunyuan3D v2** on Windows w/ a 
 ## 2. Installation & Setup
 
 ### Step 1: Download & Extract
-1. Download **HY3D_v2_WinPortable.7z** from [GitHub Releases](https://github.com/MackinationsAi/HY3D_v2_WinPortable/releases)
+1. Download **HY3D_v2_WinPortable_v0.1.3.7z** from [HY3D_v2_WinPortable_v0.1.3](https://github.com/MackinationsAi/HY3D_v2_WinPortable/releases/tag/HY3D_v2_WinPortable_v0.1.3)
 2. Extract the **.7z** file to a location of your choice.
 
 ### Step 2: Download the models & finalize install
@@ -55,22 +55,24 @@ To enable **textured model generation**, install:
 3. **Click** "Generate Base & Textured Meshes" (if texture generation is enabled).
 4. View/download the **output** in the interface.
 
+*Note* - Depending on your hardware specs the generation time might be long, but if there is no error in terminal it is working, just give it a bit of time.
+
 ### Output Files
 - 3D models are saved in:  
   ```
-  HY3D_v2/outputs/'%Y-%m-%d'/'%H-%M-%S'_steps-{num_steps}_cfg-{cfg_scale}_res-{octree_resolution}_seed-{seed}/*here
+  HY3D_v2/Hunyuan3D-2/outputs/'%Y-%m-%d'/'%H-%M-%S'_steps-{num_steps}_cfg-{cfg_scale}_res-{octree_resolution}_seed-{seed}/
   ```
 
 ## 4. Understanding the Files
 ### Main Scripts
 | File | Description |
 |------|------------|
-| `HY3D_v2/upgradio_app.py` | The **Gradio WebUI app** script |
-| `boot_HY3D_v2.bat` | Starts the app for **high VRAM GPUs** |
-| `boot_low_vram_HY3D_v2.bat` | Starts the app for **low VRAM GPUs** |
-| `dnld_models.bat` | Downloads **all required models (~39GB)** |
-| `oc_install.bat` | One-time setup for **texture generation** |
-| `run_build.bat` | Runs both  `dnld_models.bat` & `oc_install.bat` to install in one |
+| `HY3D_v2/Hunyuan3D-2/upgradio_app.py` | The **Gradio WebUI app** script |
+| `HY3D_v2/boot_HY3D_v2.bat` | Starts the app for **high VRAM GPUs** |
+| `HY3D_v2/boot_low_vram_HY3D_v2.bat` | Starts the app for **low VRAM GPUs** |
+| `HY3D_v2/dnld_models.bat` | Downloads **all required models (~39GB)** |
+| `HY3D_v2/oc_install.bat` | One-time setup for **texture generation** |
+| `HY3D_v2/run_build.bat` | Runs both  `dnld_models.bat` & `oc_install.bat` to install in one |
 
 ## 5. Troubleshooting
 ### Common Errors & Fixes
